@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-image:
+  linear-gradient(
+    rgba(255, 255, 255, 0.7),  /* Color blanco con opacidad */
+    rgba(255, 255, 255, 0.3)
+  ), 
+  url('images/pokemon.png'); 
+  background-repeat: repeat; /* Repetir la imagen en mosaico */
+  background-size: 250px 250px; /* Ajustar el tamaño de la imagen */
+  
+  z-index: -1; /* Colocar detrás del contenido */
+  
+ 
+  
+}
+
+#app {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@font-face {
+  font-family: 'PokemonSolid', 'PokemonHollow';
+  src: url('fonts/PokemonSolid.ttf') format('truetype');
+  src: url('fonts/PokemonHollow.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'PokemonSolid', 'PokemonHollow', sans-serif;
+  color: yellow;
+  font-size: 80px; 
+  text-align: center;
+  text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6); 
+  margin-bottom: 20px;
+}
+
+
+#search {
+  padding: 8px;
+  width: 200px;
+  font-size: 16px;
+}
+
+#type-filter {
+  padding: 8px;
+  font-size: 16px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  background-color:rgba(255, 251, 8, 0.733);
+  transition: transform 0.3s;
+  border: 5px solid #ddd
+}
+
+.card h3{
+  color: rgba(20, 0, 204, 0.678);
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.card p{
+  color: rgb(12, 12, 116);
+  font-size: 20px
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
+
+.card:hover {
+  transform: scale(2);
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #b5a4a4;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #0073e6;
+  color: rgb(206, 214, 218);
+  transform: scale(1.1); 
+}
+
+.pagination-button.active {
+  background-color: #0073e6;
+  color: rgb(233, 223, 223);
+}
+
+#resultado{
+  color: red;
+  font-weight: 900;
+  text-align: end;
+  position:relative;
+  max-width: 1200px;
+  
+
+}
